@@ -1,0 +1,33 @@
+.container {
+  @apply flex-row w-full grid-rows-1 whitespace-nowrap overflow-hidden bg-white py-8;
+}
+
+.logosSlide {
+  @apply flex flex-row grow shrink-0 basis-full justify-around;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slide-left infinite 20s linear;
+}
+
+.slide-right {
+  animation: slide-right infinite 20s linear;
+}

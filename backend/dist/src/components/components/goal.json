@@ -1,0 +1,12 @@
+{
+    "collectionName": "components_components_goals",
+    "info": {
+        "displayName": "Goal"
+    },
+    "options": {},
+    "attributes": {
+        "goalDescription": {
+            "type": "string"
+        }
+    }
+}

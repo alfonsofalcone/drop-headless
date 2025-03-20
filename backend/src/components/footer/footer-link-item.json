@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_footer_link_items",
+  "info": {
+    "displayName": "Footer Link Item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "footerLinkText": {
+      "type": "string"
+    },
+    "footerLinkUrl": {
+      "type": "string"
+    },
+    "isBlank": {
+      "type": "boolean"
+    }
+  }
+}

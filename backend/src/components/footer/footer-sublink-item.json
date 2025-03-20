@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footer_footer_sublink_items",
+  "info": {
+    "displayName": "Footer Sublink Item"
+  },
+  "options": {},
+  "attributes": {
+    "footerSublinkText": {
+      "type": "string"
+    },
+    "footerSublinkUrl": {
+      "type": "string"
+    },
+    "isBlank": {
+      "type": "boolean"
+    }
+  }
+}

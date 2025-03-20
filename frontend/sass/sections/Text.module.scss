@@ -1,0 +1,11 @@
+.styled-text-white {
+  *:not(p) {
+    color: white !important;
+  }
+}
+
+.styled-text-silver {
+  *:not(p) {
+    @apply text-drop-silver !important;
+  }
+}

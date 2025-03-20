@@ -1,0 +1,41 @@
+{
+    "collectionName": "components_sections_case_details",
+    "info": {
+        "displayName": "Case Details",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "sectionTitle": {
+            "type": "blocks"
+        },
+        "sectionContent": {
+            "type": "blocks"
+        },
+        "sectionTextColor": {
+            "type": "string"
+        },
+        "sectionBgColor": {
+            "type": "string"
+        },
+        "sectionStyledTextColor": {
+            "type": "enumeration",
+            "enum": [
+                "White",
+                "Silver",
+                "Black"
+            ],
+            "default": "Black"
+        },
+        "sectionButtons": {
+            "type": "component",
+            "repeatable": true,
+            "component": "components.button"
+        },
+        "sectionTags": {
+            "type": "component",
+            "repeatable": true,
+            "component": "components.tag"
+        }
+    }
+}

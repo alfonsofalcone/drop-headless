@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_sections_texts",
+  "info": {
+    "displayName": "Text",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionContent": {
+      "type": "blocks"
+    },
+    "sectionTextColor": {
+      "type": "string"
+    },
+    "sectionBgColor": {
+      "type": "string"
+    },
+    "sectionButtons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.button"
+    },
+    "sectionStyledTextColor": {
+      "type": "enumeration",
+      "enum": [
+        "White",
+        "Silver",
+        "Black"
+      ],
+      "default": "Black"
+    },
+    "sectionTags": {
+      "type": "string"
+    },
+    "sectionTitle": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_components_hero_cards",
+  "info": {
+    "displayName": "Hero Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heroCardTitle": {
+      "type": "string"
+    },
+    "heroCardText": {
+      "type": "string"
+    },
+    "heroCardLink": {
+      "type": "string"
+    }
+  }
+}

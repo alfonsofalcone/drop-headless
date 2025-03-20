@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_attributes_seos",
+  "info": {
+    "displayName": "Seo"
+  },
+  "options": {},
+  "attributes": {
+    "seoMetaTitle": {
+      "type": "string"
+    },
+    "seoMetaDescription": {
+      "type": "text",
+      "maxLength": 170
+    },
+    "seoUrl": {
+      "type": "string"
+    },
+    "seoImages": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

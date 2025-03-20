@@ -1,0 +1,18 @@
+{
+    "kind": "singleType",
+    "collectionName": "cases_lists",
+    "info": {
+        "singularName": "cases-list",
+        "pluralName": "cases-lists",
+        "displayName": "Cases List"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "casesListTitle": {
+            "type": "string"
+        }
+    }
+}

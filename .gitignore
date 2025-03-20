@@ -1,0 +1,15 @@
+# Dipendenze Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Cache e build di Strapi
+.cache/
+
+# Build di Next.js
+.next/
+out/
+
+# Variabili d’ambiente
+.env
+.env.local

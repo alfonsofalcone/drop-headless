@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_sections_carousel_logos",
+    "info": {
+        "displayName": "Carousel Logos",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "showCarousel": {
+            "type": "boolean"
+        },
+        "logoItems": {
+            "type": "component",
+            "repeatable": true,
+            "component": "components.logo-item"
+        }
+    }
+}

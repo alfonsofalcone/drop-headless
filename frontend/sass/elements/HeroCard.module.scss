@@ -1,0 +1,52 @@
+.hero-card {
+  @apply col-span-full rounded-md md:col-span-4;
+
+  &-element {
+    @apply relative text-left rounded-md p-3 lg:p-6 transform-none transition-[background-position] transition-opacity duration-[1500ms] ease-[cubic-bezier(0.165,0.84,0.44,1)] delay-300 overflow-hidden;
+  }
+
+  &-link {
+    @apply absolute inset-0 w-full h-full;
+  }
+
+  &-title {
+    @apply text-right lg:text-left text-base lg:text-2xl leading-none pb-0 lg:pb-6 uppercase max-w-full lg:max-w-[40%] ml-4 lg:ml-0;
+  }
+
+  &-text {
+    @apply hidden lg:block transition-opacity duration-[500ms] ease-[cubic-bezier(0.165,0.84,0.44,1)] delay-300 pt-3 pr-3 pb-8 opacity-0;
+  }
+
+  &-bg {
+    @apply absolute inset-0 w-full h-full bg-white opacity-[.8] hover:opacity-90 z-[-1] rounded-md translate-y-0 lg:translate-y-[calc(0%-120px)] transition-none lg:transition-all duration-700 ease-[cubic-bezier(0.165,0.84,0.44,1)];
+    &::before {
+      @apply content-[''] absolute bottom-0 left-0 ml-2 mr-2 mb-3 lg:ml-0 lg:mb-2 w-4 h-4 lg:w-8 lg:h-8 flex-shrink-0 transition-[background-position] duration-700 ease-[cubic-bezier(0.86,0,0.07,1)];
+      background-image: url("/arrow-right-45.svg"), url("/arrow-right-45.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-size: 1rem 1rem;
+      background-position: 0 0, calc(2rem * -2) calc(2rem * -2);
+      @screen lg {
+        background-size: 2rem 2rem;
+        background-position: 0 0, calc(2rem * -2) calc(2rem * -2);
+        left: calc(100% - 2.5rem);
+      }
+    }
+  }
+
+  &:hover {
+    .hero-card-text {
+      @apply opacity-100 delay-[0s];
+    }
+
+    .hero-card-bg {
+      @apply translate-y-0 opacity-100;
+      &::before {
+        background-position: calc(1rem * 2) calc(1rem * 2), 0 0;
+      }
+    }
+  }
+
+  &:not(:hover) .hero-card-text {
+    @apply delay-[0s];
+  }
+}

@@ -1,0 +1,27 @@
+@use "../base/colors";
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.bg-drop-yellow {
+  background-color: colors.$drop-yellow;
+}
+
+.bg-drop-white {
+  background-color: colors.$drop-white;
+}
+
+.bg-drop-silver {
+  background-color: colors.$drop-silver;
+}
+
+.bg-drop-gray {
+  background-color: colors.$drop-gray;
+}
+
+

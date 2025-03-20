@@ -1,0 +1,40 @@
+{
+    "collectionName": "components_sections_full_images",
+    "info": {
+        "displayName": "Full Image",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "mobileImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "desktopImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "hasButton": {
+            "type": "boolean"
+        },
+        "sectionButton": {
+            "type": "component",
+            "repeatable": false,
+            "component": "components.button"
+        }
+    }
+}

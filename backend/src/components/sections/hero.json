@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroText": {
+      "type": "string"
+    },
+    "heroBgImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heroBgHasOverlay": {
+      "type": "boolean"
+    },
+    "heroBgOverlayColor": {
+      "type": "string"
+    },
+    "heroBgOverlayOpacity": {
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "type": "decimal"
+    },
+    "heroCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.hero-card"
+    },
+    "heroCardsTitle": {
+      "type": "string"
+    }
+  }
+}

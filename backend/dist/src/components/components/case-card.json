@@ -1,0 +1,33 @@
+{
+    "collectionName": "components_components_case_cards",
+    "info": {
+        "displayName": "Case Card",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "caseImage": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "caseName": {
+            "type": "string"
+        },
+        "caseUrl": {
+            "type": "string"
+        },
+        "caseImageHPosition": {
+            "type": "integer"
+        },
+        "caseImageVPosition": {
+            "type": "integer"
+        }
+    }
+}

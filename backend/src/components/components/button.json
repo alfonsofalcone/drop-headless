@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_components_buttons",
+  "info": {
+    "displayName": "Button",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
+    },
+    "targetBlank": {
+      "type": "boolean"
+    },
+    "buttonType": {
+      "type": "enumeration",
+      "enum": [
+        "link",
+        "button",
+        "button-small",
+        "view-all"
+      ]
+    },
+    "buttonBgColor": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "primary",
+        "secondary"
+      ]
+    },
+    "buttonTag": {
+      "type": "enumeration",
+      "enum": [
+        "button",
+        "a"
+      ],
+      "default": "button"
+    }
+  }
+}

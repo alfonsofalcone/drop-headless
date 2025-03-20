@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_header_sub_menu_minor_links",
+    "info": {
+        "displayName": "Sub Menu Minor Link"
+    },
+    "options": {},
+    "attributes": {
+        "subMenuMinorLinkTitle": {
+            "type": "string"
+        },
+        "subMenuMinorLinkUrl": {
+            "type": "string"
+        }
+    }
+}

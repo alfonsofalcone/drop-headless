@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_header_sub_menu_items",
+  "info": {
+    "displayName": "Sub Menu Items",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subMenuItemName": {
+      "type": "string",
+      "required": true
+    },
+    "subMenuLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.sub-menu-link"
+    },
+    "subMenuBgColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "yellow"
+      ]
+    },
+    "subMenuMinorLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.sub-menu-minor-link"
+    },
+    "showMinorLinks": {
+      "type": "boolean"
+    },
+    "isFooterItem": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.case-card {
+  .case-card-image {
+    @apply relative block aspect-square overflow-hidden rounded-lg;
+    img {
+      @apply transition-transform duration-300 ease-in-out transform-none;
+    }
+  }
+  .case-card-title {
+    @apply relative text-2xl lg:text-3xl my-3 transition-all duration-300 ease-in-out;
+
+    &::before {
+      content: "";
+      @apply absolute w-3 h-3 bg-drop-yellow rounded-full transition-all duration-300 ease-in-out;
+      @apply top-1/2 left-0 translate-y-[-50%] scale-0;
+    }
+  }
+  &:hover {
+    .case-card-image {
+      img {
+        @apply scale-105;
+      }
+    }
+    .case-card-title {
+      @apply pl-5;
+
+      &::before {
+        @apply scale-100;
+      }
+    }
+  }
+}

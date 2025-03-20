@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_header_menu_items",
+    "info": {
+        "displayName": "Menu Items",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "menuItemName": {
+            "type": "string"
+        },
+        "subMenuItems": {
+            "type": "component",
+            "repeatable": true,
+            "component": "header.sub-menu-item"
+        }
+    }
+}

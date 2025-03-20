@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_cases",
+  "info": {
+    "displayName": "Cases",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "casesLimit": {
+      "type": "integer"
+    },
+    "caseCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.case-card"
+    },
+    "casesTitleSection": {
+      "type": "string"
+    },
+    "casesGoTo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.button"
+    }
+  }
+}

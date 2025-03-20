@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_tags",
+  "info": {
+    "displayName": "Tags"
+  },
+  "options": {},
+  "attributes": {
+    "sectionTags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.tag"
+    }
+  }
+}

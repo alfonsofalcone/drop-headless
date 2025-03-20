@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_footer_footer_menus",
+  "info": {
+    "displayName": "Footer Menu",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "footerLinkItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.footer-link-item"
+    },
+    "footerMenuTitle": {
+      "type": "string"
+    },
+    "footerSublinkItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footer.footer-sublink-item"
+    }
+  }
+}

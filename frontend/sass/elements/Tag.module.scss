@@ -1,0 +1,24 @@
+.tag {
+  @apply flex self-start;
+  &-container {
+    @apply relative flex bg-white text-black rounded-full px-4 py-1 overflow-hidden;
+    &:before {
+      @apply absolute inset-0 px-4 py-1 transition duration-300 translate-y-[-100%] text-sm lg:text-base font-medium capitalize;
+      content: attr(data-label);
+    }
+    span {
+      @apply transition duration-300 text-sm lg:text-base font-medium;
+    }
+    &:hover {
+      span {
+        @apply translate-y-[100%];
+      }
+      &:before {
+        @apply translate-y-0;
+      }
+    }
+  }
+  &-link {
+    @apply flex;
+  }
+}

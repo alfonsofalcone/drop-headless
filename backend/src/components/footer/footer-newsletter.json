@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_footer_footer_newsletters",
+  "info": {
+    "displayName": "Footer Newsletter"
+  },
+  "options": {},
+  "attributes": {
+    "footerNewsletterTitle": {
+      "type": "string"
+    },
+    "footerNewsletterText": {
+      "type": "string"
+    },
+    "footerNewsletterButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.button"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap");
+// html {
+//   overflow-y: scroll;
+// }
+
+body {
+  @apply bg-drop-silver;
+  font-family: "DM Sans", serif;
+}
+
+/* Impedisce la selezione su altri elementi */
+* {
+  user-select: none;
+}
+
+/* Imposta la selezione solo per testi, input e textarea */
+p,
+strong,
+u,
+em,
+s,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
+  @apply text-black font-light;
+  user-select: text;
+}
+
+h1 {
+  @apply text-5xl md:text-6xl lg:text-8xl;
+}
+
+/* Se necessario, abilita la selezione per altri elementi */
+a,
+button {
+  user-select: auto; /* Gli anchor e i button dovrebbero mantenere il comportamento predefinito */
+}
+
+input {
+  @apply mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500;
+}
+
+main {
+  @apply overflow-hidden;
+}
+
+p {
+  @apply text-base;
+}

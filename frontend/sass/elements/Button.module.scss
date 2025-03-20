@@ -1,0 +1,74 @@
+.button-element {
+  flex: 0 1 auto;
+  .link {
+    @apply relative inline-flex z-[2] items-center justify-center leading-none uppercase overflow-hidden no-underline rounded-full py-1 px-2 pr-8;
+
+    .pill {
+      @apply relative inline-flex shrink-0 z-[2] mr-4 leading-[1.1] uppercase overflow-hidden bg-[var(--color-yellow)] rounded-full;
+
+      &::before {
+        @apply content-[''] w-4 h-4 flex-shrink-0 transition-[background-position] duration-300 ease-[cubic-bezier(0.86,0,0.07,1)];
+        background-image: url("/arrow-right.svg"), url("/arrow-right.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-size: 1rem 1rem;
+        background-position: 0 0, calc(1rem * -2) 0;
+      }
+    }
+
+    &::after {
+      @apply content-[''] absolute z-[-1] top-0 bottom-0 block w-full transform transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] bg-drop-yellow rounded-full;
+      transform: translateX(calc(-100% + 45px));
+    }
+
+    &:hover {
+      &::after {
+        @apply transform-none;
+        // transform: translateX(0);
+      }
+
+      .pill::before {
+        background-position: calc(1rem * 2) 0, 0 0;
+      }
+    }
+  }
+
+  .button,
+  .button-small {
+    @apply relative inline-flex z-[2] items-center justify-center leading-none uppercase overflow-hidden no-underline rounded-md p-4;
+
+    &:not(.link)::before {
+      @apply content-[''] w-4 h-4 flex-shrink-0 mr-4 transition-[background-position] duration-300 ease-[cubic-bezier(0.86,0,0.07,1)];
+      background-image: url("/arrow-right-45.svg"), url("/arrow-right-45.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-size: 1rem 1rem;
+      background-position: 0 0, calc(1rem * -2) calc(1rem * -2);
+    }
+
+    &:not(.link):hover::before {
+      background-position: calc(1rem * 2) calc(1rem * 2), 0 0;
+    }
+  }
+
+  .button-small {
+    @apply text-sm leading-none;
+  }
+
+  .view-all {
+    @apply flex flex-col justify-between text-right no-underline items-end aspect-square 
+           w-full max-w-[66vw] w-full sm:max-w-[50vw] w-full md:max-w-[33vw] w-full lg:max-w-[20vw] 
+           text-3xl leading-none uppercase overflow-hidden no-underline rounded-md p-4;
+    word-spacing: 99999px;
+
+    &::before {
+      @apply content-[''] mr-auto w-8 h-8 transition-[background-position] duration-300 ease-[cubic-bezier(0.86,0,0.07,1)];
+      background-image: url("/arrow-right-45.svg"), url("/arrow-right-45.svg");
+      background-repeat: no-repeat, no-repeat;
+      background-size: 2rem 2rem;
+      background-position: 0 0, calc(2rem * -2) calc(2rem * -2);
+    }
+
+    &:hover::before {
+      background-position: calc(1rem * 2) calc(1rem * 2), 0 0;
+    }
+  }
+}

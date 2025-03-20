@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_components_tags",
+    "info": {
+        "displayName": "Tag"
+    },
+    "options": {},
+    "attributes": {
+        "tagText": {
+            "type": "string"
+        },
+        "tagLink": {
+            "type": "string"
+        },
+        "tagType": {
+            "type": "enumeration",
+            "enum": [
+                "button",
+                "a"
+            ]
+        }
+    }
+}

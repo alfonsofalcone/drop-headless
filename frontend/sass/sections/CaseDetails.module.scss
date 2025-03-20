@@ -1,0 +1,7 @@
+.case-details {
+  &-text {
+    span {
+      @apply text-xl/4 lg:text-2xl/7;
+    }
+  }
+}

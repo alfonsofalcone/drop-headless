@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_sections_goals_lists",
+  "info": {
+    "displayName": "Goals List",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "blocks"
+    },
+    "sectionContent": {
+      "type": "blocks"
+    },
+    "sectionTextColor": {
+      "type": "string"
+    },
+    "sectionBgColor": {
+      "type": "string"
+    },
+    "sectionStyledTextColor": {
+      "type": "enumeration",
+      "enum": [
+        "White",
+        "Silver",
+        "Black"
+      ]
+    },
+    "sectionGoals": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.goal"
+    }
+  }
+}
