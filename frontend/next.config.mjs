@@ -10,11 +10,6 @@ const nextConfig = {
         pathname: "/uploads/**", // Percorso delle immagini
       },
     ],
-  },
-  i18n: {
-    locales: ["en", "it"],
-    defaultLocale: "en",
-    localeDetection: false,
   }
 };
 

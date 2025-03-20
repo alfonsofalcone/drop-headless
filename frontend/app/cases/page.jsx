@@ -5,10 +5,10 @@ import Tag from "@/app/components/elements/Tag";
 
 
 // 🔥 Funzione per ottenere i dati della pagina principale
-async function fetchCasesMainPage(locale = 'en') {
+async function fetchCasesMainPage() {
   try {
     const response = await fetch(
-      `http://localhost:1337/api/cases-list?locale=${locale}`,
+      `http://localhost:1337/api/cases-list`,
       { next: { revalidate: 30 } }
     );
     if (!response.ok) notFound();
@@ -20,10 +20,10 @@ async function fetchCasesMainPage(locale = 'en') {
 }
 
 // 🔥 Funzione per ottenere i casi dalla API
-async function fetchCases(locale = 'en') {
+async function fetchCases() {
   try {
     const response = await fetch(
-      `http://localhost:1337/api/cases?populate=*&locale=${locale}`,
+      `http://localhost:1337/api/cases?populate=*`,
       { next: { revalidate: 30 } }
     );
     if (!response.ok) notFound();
@@ -58,12 +58,11 @@ function renderTags(tags) {
 
 // 🟢 🔥 Pagina aggiornata per supportare la lingua corretta
 export default async function Cases({ params }) {
-  const locale = params?.locale || "en";
 
-  const strapiPage = await fetchCasesMainPage(locale);
+  const strapiPage = await fetchCasesMainPage();
   const casesMainPageTitle = strapiPage.data.casesListTitle;
 
-  const strapi = await fetchCases(locale);
+  const strapi = await fetchCases();
   const cases = renderCases(strapi.data);
   const tagsList = getUniqueTags(strapi.data);
   const tags = renderTags(tagsList);
