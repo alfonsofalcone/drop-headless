@@ -31,7 +31,7 @@ export default function HeroSection({ data }) {
           <FadeIn>
             <Image
               className="w-full h-full object-cover"
-              src={`http://localhost:1337${data.heroBgImage[0].url}`}
+              src={`${process.env.API_URL}${data.heroBgImage[0].url}`}
               alt={data.image?.alt || "Hero Image"}
               width={data.image?.width || 1200}
               height={data.image?.height || 600}

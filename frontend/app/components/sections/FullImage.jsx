@@ -15,7 +15,7 @@ export default function HeadingSection({ data }) {
         {data.mobileImage.url && (
           <Image
             className="w-full h-full object-cover aspect-square md:hidden"
-            src={`http://localhost:1337${data.mobileImage.url}`}
+            src={`${process.env.API_URL}${data.mobileImage.url}`}
             alt={data.image?.alt || "Mobile Image"}
             width={data.image?.width || 600}
             height={data.image?.height || 600}
@@ -24,7 +24,7 @@ export default function HeadingSection({ data }) {
         {data.desktopImage.url && (
           <Image
             className="w-full h-full object-cover hidden md:block"
-            src={`http://localhost:1337${data.desktopImage.url}`}
+            src={`${process.env.API_URL}${data.desktopImage.url}`}
             alt={data.image?.alt || "Desktop Image"}
             width={data.image?.width || 1200}
             height={data.image?.height || 600}

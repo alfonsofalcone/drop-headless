@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 async function fetchFooter() {
   const response = await fetch(
-    "http://localhost:1337/api/footer?populate=footerColumns.footerLinkItems&populate=footerColumns.footerSublinkItems",
+    `${process.env.API_URL}/api/footer?populate=footerColumns.footerLinkItems&populate=footerColumns.footerSublinkItems`,
     { next: { revalidate: 30 } } // Per il caching di Next.js
   );
   const data = await response.json();

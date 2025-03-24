@@ -14,7 +14,7 @@ export default function LogoItem({ data, itemWidth }) {
     <div className={`${styles["logoItem"]}`} style={imageStyle}>
       <Image
         className="w-full max-w-32 h-auto"
-        src={`http://localhost:1337${data.logoImage?.url}`}
+        src={`${process.env.API_URL}${data.logoImage?.url}`}
         alt={data.image?.alternativeText || data.logoImageAlt || "Logo Image"}
         width={data.image?.width || 200}
         height={data.image?.height || 200}

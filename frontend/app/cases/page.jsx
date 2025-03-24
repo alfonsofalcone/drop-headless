@@ -8,7 +8,7 @@ import Tag from "@/app/components/elements/Tag";
 async function fetchCasesMainPage() {
   try {
     const response = await fetch(
-      `http://localhost:1337/api/cases-list`,
+      `${process.env.API_URL}/api/cases-list`,
       { next: { revalidate: 30 } }
     );
     if (!response.ok) notFound();
@@ -23,7 +23,7 @@ async function fetchCasesMainPage() {
 async function fetchCases() {
   try {
     const response = await fetch(
-      `http://localhost:1337/api/cases?populate=*`,
+      `${process.env.API_URL}/api/cases?populate=*`,
       { next: { revalidate: 30 } }
     );
     if (!response.ok) notFound();

@@ -63,7 +63,7 @@ import Header from "./Header";
 
 async function fetchHeader() {
   const response = await fetch(
-    "http://localhost:1337/api/header?populate=menuItem&populate=menuItem.subMenuItem&populate=menuItem.subMenuItem.subMenuLinkList",
+    "${process.env.API_URL}/api/header?populate=menuItem&populate=menuItem.subMenuItem&populate=menuItem.subMenuItem.subMenuLinkList",
     { next: { revalidate: 30 } } // Cache per 30 secondi
   );
   const data = await response.json();

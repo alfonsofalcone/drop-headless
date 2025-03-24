@@ -4,9 +4,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "1337", // Specifica la porta del server Strapi
+        protocol: "https",
+        hostname: "strapi.drop.it",
         pathname: "/uploads/**", // Percorso delle immagini
       },
     ],
