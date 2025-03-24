@@ -3,7 +3,7 @@ import Header from "../components/Header";
 
 async function fetchHeader() {
   const response = await fetch(
-    `${process.env.API_URL}/api/header?populate=localizations.menuItems&populate=menuItems&populate=menuItems.subMenuItems&populate=menuItems.subMenuItems.subMenuLinks&populate=menuItems.subMenuItems.subMenuMinorLinks`,
+    `${process.env.STRAPI_URL}/api/header?populate=localizations.menuItems&populate=menuItems&populate=menuItems.subMenuItems&populate=menuItems.subMenuItems.subMenuLinks&populate=menuItems.subMenuItems.subMenuMinorLinks`,
     { next: { revalidate: 30 } } // Per il caching di Next.js
   );
   const data = await response.json();

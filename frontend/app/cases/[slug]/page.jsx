@@ -6,7 +6,7 @@ import Tag from "@/app/components/elements/Tag";
 
 async function filterCases(slug) { 
   try {
-    const response = await fetch(`${process.env.API_URL}/api/cases?populate=caseImage`, {
+    const response = await fetch(`${process.env.STRAPI_URL}/api/cases?populate=caseImage`, {
       next: { revalidate: 30 },
     });
 
@@ -38,7 +38,7 @@ async function filterCases(slug) {
 async function fetchSingleCase(documentId) {
   try {
     const response = await fetch(
-      `${process.env.API_URL}/api/cases/${documentId}?populate=sections.populate=*&populate=sections.mobileImage&populate=sections.desktopImage&populate=sections.sectionTags&populate=sections.sectionGoals`,
+      `${process.env.STRAPI_URL}/api/cases/${documentId}?populate=sections.populate=*&populate=sections.mobileImage&populate=sections.desktopImage&populate=sections.sectionTags&populate=sections.sectionGoals`,
       { next: { revalidate: 30 } }
     );
 
