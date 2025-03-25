@@ -31,7 +31,7 @@ export default function HeroSection({ data }) {
           <FadeIn>
             <Image
               className="w-full h-full object-cover"
-              src={`${process.env.STRAPI_URL}${data.heroBgImage[0].url}`}
+              src={`${process.env.STRAPI_URL || 'http://localhost:1337'}${data.heroBgImage[0].url}`}
               alt={data.image?.alt || "Hero Image"}
               width={data.image?.width || 1200}
               height={data.image?.height || 600}

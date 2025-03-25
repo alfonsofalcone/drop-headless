@@ -1,6 +1,9 @@
 import "../sass/main.scss";
 import HeaderWrapper from "./contexts/HeaderWrapper";
 import FooterWrapper from "./contexts/FooterWrapper";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
+
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["100", "400", "700"], display: 'swap'});
 
 export const metadata = {
   title: "Drop Headless Test",
@@ -13,7 +16,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" sizes="any" />
       </head>
-      <body>
+      <body className={`${dmSans.className}`}>
         <HeaderWrapper />
         <main className="flex flex-col gap-8 row-start-2 items-center justify-items-center min-h-screen gap-16">
           {children}

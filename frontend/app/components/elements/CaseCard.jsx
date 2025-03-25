@@ -11,7 +11,7 @@ export default function CaseCard({ data }) {
     if (!data.caseImage) return placeholderSVG;
   
     const image = Array.isArray(data.caseImage) ? data.caseImage[0] : data.caseImage;
-    return image?.url ? `${process.env.STRAPI_URL}${image.url}` : placeholderSVG;
+    return image?.url ? `${process.env.STRAPI_URL || 'http://localhost:1337'}${image.url}` : placeholderSVG;
   }
   
   function caseSlug(name) {
