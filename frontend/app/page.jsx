@@ -7,7 +7,7 @@ async function fetchHomePageData() {
   // const fetchUrl = "${process.env.STRAPI_URL}/api/home?populate=*&[sections][populate]=*";
   const response = await fetch(
     `${process.env.STRAPI_URL}/api/home?populate=sections.populate=*&populate=seoAttributes&populate=sections.heroBgImage&populate=sections.sectionButtons&populate=sections.heroCards&populate=sections.caseCards&populate=sections.caseCards.caseImage&populate=sections.casesGoTo&populate=sections.logoItems&populate=sections.logoItems.logoImage`,
-    { next: { revalidate: 3600 } } // Cache dei dati lato server
+    { next: { revalidate: 60 } } // Cache dei dati lato server
   );
 
   if (!response.ok) {

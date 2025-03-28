@@ -3,7 +3,7 @@ import HeaderWrapper from "./contexts/HeaderWrapper";
 import FooterWrapper from "./contexts/FooterWrapper";
 import { DM_Sans, DM_Serif_Display } from "next/font/google";
 
-const dmSans = DM_Sans({ subsets: ["latin"], weight: ["100", "400", "700"], display: 'swap'});
+const dmSans = DM_Sans({ subsets: ["latin"], weight: ["100", "400", "500", "600", "700"], display: 'swap'});
 
 export const metadata = {
   title: "Drop Headless Test",
