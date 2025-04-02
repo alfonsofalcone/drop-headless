@@ -48,7 +48,7 @@ export default function HeroSection({ data }) {
         <div className="relative w-full">
           <div className="flex min-h-screen justify-center mx-auto p-6 lg:p-10 z-10 w-full lg:max-w-[80vw]">
             <div className="flex flex-col justify-center items-start w-full">
-              <h1 className="text-5xl md:text-6xl lg:text-8xl font-light text-white">
+              <h1 className="text-5xl md:text-6xl lg:text-8xl text-white">
                 {data.heroTitle}
               </h1>
               <p className="text-lg text-gray-200">{data.heroText}</p>

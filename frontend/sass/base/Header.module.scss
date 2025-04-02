@@ -1,8 +1,24 @@
 .header-menu {
   &-panel {
-    @apply text-white;
     transition: all 0.2s ease-in-out;
   }
+
+  ul {
+    @apply flex flex-col list-none;
+  }
+  
+  li {
+    @apply relative mb-3 transition-all duration-300 ease-in-out hover:pl-5;
+    &:before {
+      content: "";
+      @apply absolute rounded-full w-2 h-2 bg-black transition-all duration-300 ease-in-out translate-y-[-50%] scale-0 top-1/2 left-0;
+    }
+  
+    &:hover:before {
+      @apply scale-100;
+    }
+  }
+
 }
 
 .header-menu-button {
@@ -36,22 +52,6 @@
   &.open .block:nth-child(2) {
     --rotate: -45deg; /* Ruota di -45 gradi */
     --y: 0;
-  }
-}
-
-ul {
-  @apply flex flex-col list-none;
-}
-
-li {
-  @apply relative mb-3 transition-all duration-300 ease-in-out hover:pl-5;
-  &:before {
-    content: "";
-    @apply absolute rounded-full w-2 h-2 bg-black transition-all duration-300 ease-in-out translate-y-[-50%] scale-0 top-1/2 left-0;
-  }
-
-  &:hover:before {
-    @apply scale-100;
   }
 }
 

@@ -5,6 +5,7 @@ body {
 /* Impedisce la selezione su altri elementi */
 * {
   user-select: none;
+  @apply font-normal tracking-tighter;
 }
 
 /* Imposta la selezione solo per testi, input e textarea */
@@ -22,7 +23,6 @@ h5,
 h6,
 input,
 textarea {
-  @apply text-black font-light;
   user-select: text;
 }
 

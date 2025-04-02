@@ -1,9 +1,7 @@
 import { motion } from "motion/react";
 import { useInView } from "react-intersection-observer";
 
-export default function HideOnTop({ children, bgColor }) {
-  console.log(bgColor);
-  
+export default function HideOnTop({ children, bgColor }) { 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const backgroundColor = bgColor?.toLowerCase() || "white"
 

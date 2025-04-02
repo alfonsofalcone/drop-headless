@@ -1,7 +1,7 @@
-import "../sass/main.scss";
-import HeaderWrapper from "./contexts/HeaderWrapper";
-import FooterWrapper from "./contexts/FooterWrapper";
-import { DM_Sans, DM_Serif_Display } from "next/font/google";
+import "@/sass/main.scss";
+import HeaderWrapper from "@/app/contexts/HeaderWrapper";
+import FooterWrapper from "@/app/contexts/FooterWrapper";
+import { DM_Sans } from "next/font/google";
 
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ["100", "400", "500", "600", "700"], display: 'swap'});
 
@@ -12,11 +12,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ overflow: "hidden" }}>
       <head>
         <link rel="icon" type="image/png" href="/favicon.png" sizes="any" />
       </head>
-      <body className={`${dmSans.className}`}>
+      <body className={`${dmSans.className} font-normal`}>
         <HeaderWrapper />
         <main className="flex flex-col gap-8 row-start-2 items-center justify-items-center min-h-screen gap-16">
           {children}

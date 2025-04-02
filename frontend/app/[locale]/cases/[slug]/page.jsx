@@ -54,8 +54,6 @@ async function fetchSingleCase(documentId) {
 }
 
 function getUniqueTags(cases) {
-  console.log(cases); // Per debug
-
   const allTags = cases
     .flatMap((c) => c.caseTags?.split(",").map(tag => tag.trim()) || []) // Estrai e pulisci i tag
     .filter(tag => tag); // Rimuove eventuali stringhe vuote
@@ -72,9 +70,6 @@ function renderTags(tags) {
 }
 
 async function filterCasesByTag(data, slug) { 
-  console.log("Dati ricevuti:", data);
-  console.log("Slug ricevuto:", slug);
-
   // Controlla se data ha la struttura attesa
   if (!data || !data.data) {
     console.error("Formato dati non valido:", data);
@@ -108,8 +103,7 @@ function capitalizeFirstLetter(str) {
 }
 
 export default async function Case({ params }) {
-  const { slug } = await params;
-  
+  const { slug, lang } = params;
   const { data: strapi, isSingleCase } = await filterCases(slug);
 
   if (!strapi || (Array.isArray(strapi) && strapi.length === 0)) {

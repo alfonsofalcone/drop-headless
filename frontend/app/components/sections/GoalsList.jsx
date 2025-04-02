@@ -84,8 +84,6 @@ export default function CaseDetailsSection({ data }) {
     return null;
   }
   const altColor = `${data.sectionStyledTextColor.toLowerCase()}`;
-  console.log(data);
-
   const sectionGoals = renderGoals(data.sectionGoals);
   const sectionGoalsLength = sectionGoals.length;
 

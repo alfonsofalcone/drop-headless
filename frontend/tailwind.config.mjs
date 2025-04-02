@@ -15,6 +15,7 @@ module.exports = {
         "drop-silver": "#ced2d4",
         "drop-yellow": "#ffdf36",
         "drop-white": "#ffffff",
+        "drop-black": "#000000",
         "drop-header-menu": "rgba(0, 0, 0, 0.9)",
       },
       spacing: {

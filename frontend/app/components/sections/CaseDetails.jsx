@@ -4,9 +4,7 @@ import Button from "../elements/Button";
 import Tag from "../elements/Tag";
 import styles from "@/sass/sections/CaseDetails.module.scss";
 
-function renderTags(tags) {
-  console.log(tags);
-  
+function renderTags(tags) { 
   if (!tags || !Array.isArray(tags)) return null;
 
   return tags.map((node, index) => {
@@ -90,8 +88,6 @@ export default function CaseDetailsSection({ data }) {
     return null;
   }
   const altColor = `${data.sectionStyledTextColor.toLowerCase()}`;
-  console.log(data);
-
   const sectionTitle = renderContent(data.sectionTitle, altColor);
   
   const sectionContent = renderContent(data.sectionContent, altColor);

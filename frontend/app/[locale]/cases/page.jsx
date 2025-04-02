@@ -11,6 +11,7 @@ async function fetchCasesMainPage() {
       `${process.env.STRAPI_URL}/api/cases-list`,
       { next: { revalidate: 30 } }
     );
+    
     if (!response.ok) notFound();
 
     return await response.json();
@@ -35,9 +36,7 @@ async function fetchCases() {
 }
 
 // 🔥 Renderizza le card dei casi studio
-function renderCases(cases) {
-  console.log(cases);
-  
+function renderCases(cases) { 
   if (!cases || !Array.isArray(cases)) return null;
   return cases.map((node, index) => <CaseCard key={index} data={node} />);
 }
@@ -57,7 +56,7 @@ function renderTags(tags) {
 }
 
 // 🟢 🔥 Pagina aggiornata per supportare la lingua corretta
-export default async function Cases({ params }) {
+export default async function Cases() {
 
   const strapiPage = await fetchCasesMainPage();
   const casesMainPageTitle = strapiPage.data.casesListTitle;

@@ -3,7 +3,7 @@
   li {
     @apply mb-2;
     a {
-      @apply text-white font-light text-2xl lg:text-3xl max-w-[75%];
+      @apply text-white font-normal text-2xl lg:text-3xl max-w-[75%];
     }
     &::before {
       @apply bg-white top-[1rem] lg:top-[1.2rem];
